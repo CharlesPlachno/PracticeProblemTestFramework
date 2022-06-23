@@ -29,6 +29,7 @@ def pivot_index(nums):
                 right_sum += nums[right]
         if left_sum == right_sum:
             index = i
+            return index
     return index
 
 

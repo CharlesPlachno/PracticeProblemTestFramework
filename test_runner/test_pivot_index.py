@@ -12,3 +12,6 @@ def test_example_two():
 
 def test_example_three():
     assert pivot_index([2,1,-1]) == 0
+
+def test_example_four():
+    assert pivot_index([-1,-1,0,0,-1,-1]) == 2
