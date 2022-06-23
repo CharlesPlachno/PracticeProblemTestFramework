@@ -1,3 +1,7 @@
+'''
+a set of positive and negative tests for the is_palindrome function
+'''
+
 from problems.palindrome_number import is_palindrome
 import pytest
 
