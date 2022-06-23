@@ -8,7 +8,7 @@ For example, 121 is a palindrome while 123 is not.
 '''
 
 
-def isPalindrome(self, x: int) -> bool:
+def isPalindrome(x: int) -> bool:
     text = str(x)
     for i in range(len(text)):
         #loop through index while checking against opposite index
