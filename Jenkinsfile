@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('tests') {
             steps {
-                sh 'python --version'
+                sh 'ENV PYTHONPATH "${PYTHONPATH}:/var/jenkins_home/workspace/test-pipeline_master/"'
                 sh 'pip install --no-cache-dir -r requirements.txt'
                 sh 'pytest -v --junitxml=reports/result.xml'
             }
