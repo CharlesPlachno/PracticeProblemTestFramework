@@ -8,7 +8,7 @@ This also applies to the right edge of the array.
 Return the leftmost pivot index. If no such index exists, return -1
 '''
 
-def pivot_index(nums):
+def pivot_index_slow(nums):
     """given list of ints return int"""
     length = len(nums)
     index = -1
@@ -30,6 +30,24 @@ def pivot_index(nums):
         if left_sum == right_sum:
             index = i
             return index
+    return index
+
+def pivot_index(nums):
+    """given list of ints return int"""
+    length = len(nums)
+    index = -1
+    # return -1 if empty array
+    if length == 0:
+        return index
+    left_sum = 0
+    right_sum = sum(nums)
+    # iterate through nums, subtract the current index from right side and add the new number to the left
+    for i in range(length):
+        right_sum -= nums[i]
+        if i>0:
+            left_sum += nums[i-1]
+        if right_sum == left_sum:
+            return i
     return index
 
 
