@@ -1,6 +1,4 @@
-
-import pytest
-from test_runner.src.problems.palindromeNumber import PalindromeNumber
+from problems.palindromeNumber import PalindromeNumber
 
 def test_pal():
     palindromeTest = PalindromeNumber()
