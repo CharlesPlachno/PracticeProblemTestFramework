@@ -4,6 +4,9 @@ Check if the two strings are anagrams: same character are present in the same am
 '''
 
 def is_anagram(word1, word2):
+    # Should remove all whitespace and ignore capitalization.
+    word1 = "".join(word1.split()).lower() # removes all whitespaces from anywhere in the string
+    word2 = "".join(word2.split()).lower() # also make entire string lowercase
     if len(word1) != len(word2):
         return False
     freq1 = {}
