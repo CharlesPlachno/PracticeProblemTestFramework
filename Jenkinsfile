@@ -19,8 +19,8 @@ pipeline {
                 sh 'pytest -v --junitxml=reports/result.xml'
             }
         }
-        stage('publish_results') {
-            steps {
+        post {
+            always {
                 junit 'reports/result.xml'
             }
         }
