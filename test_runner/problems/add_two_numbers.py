@@ -36,6 +36,12 @@ def addTwoNumbers(l1, l2):
         if current_l2:
             num2 = current_l2.val
             current_l2 = current_l2.next
+        # No values should ever be more than 9, if so, print fail and return none
+        if num1 > 9 or num2 > 9:
+            print("ERROR - addTwoNumbers")
+            print("value in linked list more than a single digit, returning None")
+            return None
+
         sum = num1 + num2 + remainder
         remainder = 0
         if sum >= 10:
