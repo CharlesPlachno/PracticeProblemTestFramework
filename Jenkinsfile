@@ -19,10 +19,10 @@ pipeline {
                 sh 'pytest -v --junitxml=reports/result.xml'
             }
         }
-        post {
+    }
+    post {
             always {
                 junit 'reports/result.xml'
             }
         }
-    }
 }
