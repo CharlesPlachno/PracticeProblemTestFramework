@@ -1,23 +1,9 @@
 
-
 # Definition for singly-linked list.
 class SingleListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-
-
-    def reverse_number(self, num):
-        # given a non-negative integer, return a single linked list representing the number in reverse order
-        # For use example see test_add_two_numbers
-        num = str(num)
-        last_node = None
-
-        for digit in num:
-            current_node = SingleListNode(int(digit), last_node)
-            last_node = current_node
-
-        return current_node
 
     def to_int(self):
         depth = self.get_depth()
@@ -37,3 +23,14 @@ class SingleListNode:
             current = current.next
         return depth
 
+def number_to_sll(num):
+    # given a non-negative integer, return a single linked list representing the number in reverse order
+    # For use example see test_add_two_numbers
+    num = str(num)
+    last_node = None
+
+    for digit in num:
+        current_node = SingleListNode(int(digit), last_node)
+        last_node = current_node
+
+    return current_node
