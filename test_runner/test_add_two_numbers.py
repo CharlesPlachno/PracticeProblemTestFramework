@@ -2,8 +2,9 @@
 a set of input/output tests for the add_two_numbers function
 '''
 
-from problems.add_two_numbers import addTwoNumbers
 from problems.data_structures import SingleListNode
+from problems.add_two_numbers import addTwoNumbers
+
 import pytest
 
 # DECLARE VARIABLES for test input

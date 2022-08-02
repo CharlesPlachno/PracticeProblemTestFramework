@@ -10,7 +10,7 @@
 #-------------   ==  -----------
 # 7 -> 0 -> 8        807
 
-from data_structures import SingleListNode
+from .data_structures import SingleListNode
 
 def addTwoNumbers(l1, l2):
     # Throw an error if either of the arguments are not ListNode objects
