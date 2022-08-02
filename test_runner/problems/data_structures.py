@@ -7,7 +7,7 @@ class SingleListNode:
         self.next = next
 
 
-    def reverse_number(num):
+    def reverse_number(self, num):
         # given a non-negative integer, return a single linked list representing the number in reverse order
         # For use example see test_add_two_numbers
         num = str(num)
