@@ -18,6 +18,36 @@ def addTwoNumbers(l1, l2):
         print("ERROR - addTwoNumbers")
         print("Both arguments must be ListNode objects. Returning None.")
         return None
+    current_l1 = l1
+    current_l2 = l2
+    l3_blank_head = SingleListNode(0)
+    remainder = 0
+    current_l3 = l3_blank_head
+
+    while(current_l1 != None or current_l2 != None or remainder > 0):
+
+        # While there are more numbers to add from either of the lists
+        # prepare calculation
+        num1 = 0
+        if current_l1:
+            num1 = current_l1.val
+            current_l1 = current_l1.next
+        num2 = 0
+        if current_l2:
+            num2 = current_l2.val
+            current_l2 = current_l2.next
+        sum = num1 + num2 + remainder
+        remainder = 0
+        if sum >= 10:
+            remainder = 1
+            sum = sum - 10
+        current_l3.next = SingleListNode(sum)
+        current_l3 = current_l3.next
+
+    return l3_blank_head.next
+
+
+
 
 
 

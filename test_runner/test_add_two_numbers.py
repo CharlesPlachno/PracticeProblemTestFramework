@@ -12,11 +12,11 @@ pl1 = number_to_sll(342)
 pl2 = number_to_sll(465)
 pl3 = number_to_sll(807)
 
-pl4= number_to_sll(0)
+pl4 = number_to_sll(0)
 pl5 = number_to_sll(0)
 pl6 = number_to_sll(0)
 
-pl7= number_to_sll(9999999)
+pl7 = number_to_sll(9999999)
 pl8 = number_to_sll(9999)
 pl9 = number_to_sll(10009998)
 
