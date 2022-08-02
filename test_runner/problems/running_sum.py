@@ -16,9 +16,10 @@ def running_sums(nums):
         # Check valid value
         try:
             num = float(num)
-        except:
+        except ValueError:
             print("%s is not a valid number" % str(num))
             return None
+
         current_sum += num
         run_sums.append(current_sum)
     return run_sums
