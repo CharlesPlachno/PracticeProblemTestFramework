@@ -1,9 +1,9 @@
 
 # Definition for singly-linked list.
 class SingleListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, link=None):
         self.val = val
-        self.next = next
+        self.link = link
 
     def to_int(self):
         depth = self.get_depth()
@@ -12,7 +12,7 @@ class SingleListNode:
 
         for i in range(depth):
             converted_int += currentNode.val * 10**i
-            currentNode = currentNode.next
+            currentNode = currentNode.link
         return converted_int
 
     def get_depth(self):
@@ -20,7 +20,7 @@ class SingleListNode:
         current = self
         while(current != None):
             depth +=1
-            current = current.next
+            current = current.link
         return depth
 
 def number_to_sll(num):

@@ -42,12 +42,12 @@ def addTwoNumbers(l1, l2):
             print("value in linked list more than a single digit, returning None")
             return None
 
-        sum = num1 + num2 + remainder
+        single_sum = num1 + num2 + remainder
         remainder = 0
-        if sum >= 10:
+        if single_sum >= 10:
             remainder = 1
-            sum = sum - 10
-        current_l3.next = SingleListNode(sum)
+            single_sum = single_sum - 10
+        current_l3.next = SingleListNode(single_sum)
         current_l3 = current_l3.next
 
     return l3_blank_head.next
