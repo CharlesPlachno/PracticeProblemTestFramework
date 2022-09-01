@@ -10,8 +10,8 @@ def test_sll_reverse_number():
     output_li = SingleListNode(3, SingleListNode(2, SingleListNode(1)))
     test_li = number_to_sll(input_num)
     assert test_li.val == output_li.val
-    assert test_li.next.val == output_li.next.val
-    assert test_li.next.next.val == output_li.next.next.val
+    assert test_li.link.val == output_li.link.val
+    assert test_li.link.link.val == output_li.link.link.val
 
 def test_sll_depth():
     input_li = SingleListNode(3, SingleListNode(2, SingleListNode(1)))

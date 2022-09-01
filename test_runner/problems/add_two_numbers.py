@@ -31,11 +31,11 @@ def addTwoNumbers(l1, l2):
         num1 = 0
         if current_l1:
             num1 = current_l1.val
-            current_l1 = current_l1.next
+            current_l1 = current_l1.link
         num2 = 0
         if current_l2:
             num2 = current_l2.val
-            current_l2 = current_l2.next
+            current_l2 = current_l2.link
         # No values should ever be more than 9, if so, print fail and return none
         if num1 > 9 or num2 > 9:
             print("ERROR - addTwoNumbers")
@@ -47,10 +47,10 @@ def addTwoNumbers(l1, l2):
         if single_sum >= 10:
             remainder = 1
             single_sum = single_sum - 10
-        current_l3.next = SingleListNode(single_sum)
-        current_l3 = current_l3.next
+        current_l3.link = SingleListNode(single_sum)
+        current_l3 = current_l3.link
 
-    return l3_blank_head.next
+    return l3_blank_head.link
 
 
 
